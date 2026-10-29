@@ -1,0 +1,8 @@
+# Never commit secrets. CalBot keeps its keys in Apps Script "Script Properties", not in files.
+.env
+.env.*
+*.key
+.clasprc.json
+.clasp.json
+node_modules/
+.DS_Store
