@@ -52,7 +52,9 @@ Google will ask for permission. You'll see "Google hasn't verified this app." Th
 expected, since the script is yours. Click **Advanced → Go to (project name) (unsafe) →
 Allow**. If nothing happens afterward, run **1. Run setup** a second time.
 
-![Unverified app warning](docs/images/05-unverified-warning.png)
+<img width="300" alt="Google's hasn't verified this app warning with the Advanced link highlighted" src="https://github.com/user-attachments/assets/3fb479f9-14c6-45ab-bea8-0885ef3ec997" />
+
+<img width="300" alt="The expanded warning with the Go to CalBot (unsafe) link highlighted" src="https://github.com/user-attachments/assets/7612dcf7-07b4-4a77-bd14-82f987086863" />
 
 **4. Publish it.** This creates the link your iPhone will send texts to.
 
