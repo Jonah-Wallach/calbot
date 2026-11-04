@@ -39,14 +39,14 @@ click **Create API key**, and create one. Keep it private.
 
 <img width="600" alt="The API Keys page in Google AI Studio with the Create API key button highlighted" src="https://github.com/user-attachments/assets/236466fd-8c24-4806-98c8-3822c41336ce" />
 
-**2. Copy the template.** Open [TEMPLATE LINK] and click **Make a copy**.
+**2. Copy the template.** Open [https://docs.google.com/spreadsheets/d/1MNyX8HtxjJQYHt-WO3JmCR_uURQT24z_mPnWFgtV9oU/copy] and click **Make a copy**. You’ll see a notice that the Apps Script file is copied too. That’s expected. It’s the bot’s code, and you can click View Apps Script file to read it first.
 
-![Make a copy](docs/images/02-make-copy.png)
 
 **3. Run setup.** In your copy, refresh the page. A **CalBot** menu appears at the top.
 Click **CalBot → 1. Run setup** and paste your Gemini key when asked.
 
-![CalBot menu](docs/images/03-calbot-menu.png)
+<img width="600" alt="The CalBot menu in the Sheet showing Run setup and Email me my shortcut link" src="https://github.com/user-attachments/assets/d9536534-af5d-4ff7-b497-1741a0c5d562" />
+
 
 Google will ask for permission. You'll see "Google hasn't verified this app." That's
 expected, since the script is yours. Click **Advanced → Go to (project name) (unsafe) →
@@ -54,12 +54,22 @@ Allow**. If nothing happens afterward, run **1. Run setup** a second time.
 
 ![Unverified app warning](docs/images/05-unverified-warning.png)
 
-**4. Publish it.** Click **Extensions → Apps Script**. At the top right, click **Deploy →
-New deployment**, then the gear ⚙️ → **Web app**. Set **Execute as: Me** and **Who has
-access: Anyone**, then click **Deploy** and copy the **Web app URL**.
+**4. Publish it.** This creates the link your iPhone will send texts to.
 
-![Deploy settings](docs/images/08-deploy-web-app.png)
+1. In your copy, click **Extensions → Apps Script**.
+2. Click the blue **Deploy** button (top right) → **New deployment**.
+3. Click the gear ⚙️ next to "Select type" and choose **Web app**.
+4. Set **Execute as** to **Me**.
+5. Set **Who has access** to **Anyone**. Don't pick "Anyone with Google account," because your
+   iPhone can't sign in and the shortcut would fail. Your link is protected by a secret key that
+   only you have. (On a school or work account this option may be greyed out, so use a personal
+   Gmail.)
+6. Click **Deploy**. If Google asks you to authorize access, click through the same
+   **Advanced → Go to (project name) (unsafe) → Allow** screens as before.
+7. Copy the **Web app URL**. It ends in `/exec`. Don't copy the **Deployment ID**, which is a
+   different string. You can find the URL again anytime under **Deploy → Manage deployments**.
 
+<!-- TODO screenshot: docs/images/08-deploy-web-app.png -->
 **5. Get your shortcut link.** Back in the Sheet, click **CalBot → 2. Email me my shortcut
 link** and paste the URL. A link arrives in your email.
 
